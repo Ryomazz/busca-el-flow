@@ -15,12 +15,16 @@ body {
    align-items: center;
    text-align: center;
    overflow-x: hidden;
-   width: 100vw;
-   padding: 3rem 1rem;
+   width: 100%;
+   padding: 3rem 0;
 }
 
-h1 {
+h1,
+h2,
+h3,
+p {
    margin: 0;
+   padding: 0;
 }
 
 .container {
