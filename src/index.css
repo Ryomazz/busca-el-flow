@@ -91,11 +91,12 @@ h1 {
 
    & .footer {
       position: absolute;
-      bottom: 20px;
+      top: 5px;
       width: 100%;
       left: 0px;
       text-align: center;
       color: #fefefece;
+      font-size: 0.9rem;
 
       & h2 {
          margin: 0;
