@@ -116,7 +116,7 @@ function App() {
          <h1>Busca el flow</h1>
          <h2>Evento de baile urbano</h2>
          <p>
-            Esta competencia se ralizará con el fin de hacernos un espacio a
+            Esta competencia se realizará con el fin de hacernos un espacio a
             todos los bailarines aficionados o profesionales amantes de baile
             urbano, se enfrentarán 16 equipos para demostrar sus habilidades,
             creatividad y carisma, solo uno de ellos se llevara el gran premio,
@@ -126,9 +126,9 @@ function App() {
             sobre todo hacer mucho ruido.
          </p>
 
-         <h3>Atencion</h3>
+         <h3>Atención</h3>
          <p>
-            Se recaudara 150 MN por integrante del equipo, el representante del
+            Se recaudará 150 MN por integrante del equipo, el representante del
             mismo será el responsable de realizar el pago ya sea por
             transferencia o en efectivo. <br />
             <strong>Contactar al 58052991 para realizar el pago.</strong>
