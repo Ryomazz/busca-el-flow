@@ -1,8 +1,11 @@
-# React + Vite
+# Busca el flow - formulario para evento de baile
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Formulario sin backend, para recoger los datos de los participantes en un evento de baile en mi municipio.
 
-Currently, two official plugins are available:
+## Descripcion
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Para todo el despliegue era necesario aglo sencillo, gratis y que dentro de Cuba, se pudiera acceder desde el movil sin VPN. El hosting que use fue **Github Pages**, ya que permite subir sitios gratis sin backend.
+
+Para el envio de datos use **FormSubmit.co**, un servicio que permite enviar correos sin backend.
+
+Realmente no necesitabamos mucho mas, ni backend ni base de datos.
