@@ -6,6 +6,9 @@ function App() {
       age: "",
       ci: "",
       phone: "",
+      province: "",
+      participants: "",
+      teamName: "",
    });
    const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -14,7 +17,8 @@ function App() {
       if (
          fields.ci.length < 11 ||
          fields.phone.length < 8 ||
-         fields.age.length < 2
+         fields.age.length < 2 ||
+         Number(fields.participants) < 5
       ) {
          return;
       }
@@ -45,7 +49,28 @@ function App() {
          return;
       }
       if (
+         e.target.name === "participants" &&
+         !/^[0-9]+$/.test(e.target.value) &&
+         e.target.value.length >= 1
+      ) {
+         return;
+      }
+      if (
          e.target.name === "name" &&
+         !/^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/.test(e.target.value) &&
+         e.target.value.length >= 1
+      ) {
+         return;
+      }
+      if (
+         e.target.name === "province" &&
+         !/^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/.test(e.target.value) &&
+         e.target.value.length >= 1
+      ) {
+         return;
+      }
+      if (
+         e.target.name === "teamName" &&
          !/^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/.test(e.target.value) &&
          e.target.value.length >= 1
       ) {
@@ -62,6 +87,9 @@ function App() {
       fromDataUser.append("edad", fields.age);
       fromDataUser.append("carnet", fields.ci);
       fromDataUser.append("telefono", fields.phone);
+      fromDataUser.append("provincia", fields.province);
+      fromDataUser.append("participantes", fields.participants);
+      fromDataUser.append("nombre del equipo", fields.teamName);
 
       fetch("https://formsubmit.co/ajax/ryuz1707@gmail.com", {
          method: "POST",
@@ -77,6 +105,9 @@ function App() {
          age: "",
          ci: "",
          phone: "",
+         province: "",
+         participants: "",
+         teamName: "",
       });
    };
 
@@ -84,6 +115,26 @@ function App() {
       <section className="container">
          <h1>Busca el flow</h1>
          <h2>Evento de baile urbano</h2>
+         <p>
+            Esta competencia se ralizará con el fin de hacernos un espacio a
+            todos los bailarines aficionados o profesionales amantes de baile
+            urbano, se enfrentarán 16 equipos para demostrar sus habilidades,
+            creatividad y carisma, solo uno de ellos se llevara el gran premio,
+            pero el mayor objetivo es crear una comunidad donde abunda el
+            respeto, la humildad y el compañerismo. Los invitamos a formar parte
+            de este gran movimiento para rescatar esa cultura de las calles y
+            sobre todo hacer mucho ruido.
+         </p>
+
+         <h3>Atencion</h3>
+         <p>
+            Se recaudara 150 MN por integrante del equipo, el representante del
+            mismo será el responsable de realizar el pago ya sea por
+            transferencia o en efectivo. <br />
+            <strong>Contactar al 58052991 para realizar el pago.</strong>
+         </p>
+
+         <h3>Datos del Capitán o Representante del Equipo</h3>
          {isSubmitted ? (
             <div className="submited">
                <h2>Datos enviados con exito </h2>
@@ -131,6 +182,39 @@ function App() {
                   minLength="0"
                   maxLength="8"
                   value={fields.phone}
+                  onChange={handleChange}
+                  autoComplete="off"
+               />
+               <input
+                  type="text"
+                  name="province"
+                  required
+                  placeholder="Provincia"
+                  minLength="0"
+                  maxLength="30"
+                  value={fields.province}
+                  onChange={handleChange}
+                  autoComplete="off"
+               />
+               <input
+                  type="text"
+                  name="participants"
+                  required
+                  placeholder="Numero de participantes"
+                  minLength="0"
+                  maxLength="2"
+                  value={fields.participants}
+                  onChange={handleChange}
+                  autoComplete="off"
+               />
+               <input
+                  type="text"
+                  name="teamName"
+                  required
+                  placeholder="Nombre del Equipo"
+                  minLength="0"
+                  maxLength="25"
+                  value={fields.teamName}
                   onChange={handleChange}
                   autoComplete="off"
                />
