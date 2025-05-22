@@ -1,0 +1,104 @@
+body {
+   padding: 0;
+   margin: 0;
+   height: 100vh;
+   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+   background-image: linear-gradient(rgba(0, 0, 0, 0.349), rgba(0, 0, 0, 0.342)),
+      url("assets/DeWatermark.ai_1747913912424.png");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   backdrop-filter: blur(5px);
+   display: flex;
+   justify-content: center;
+   text-align: center;
+   overflow: hidden;
+}
+
+h1 {
+   margin: 0;
+}
+
+.container {
+   margin-top: 3rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   padding: 0 1rem;
+
+   & h1 {
+      color: #fefefe;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+   }
+
+   & h2 {
+      color: #fefefe;
+      margin: 0;
+      margin-bottom: 3.5rem;
+   }
+
+   & form {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      & input {
+         font-size: 1rem;
+         padding: 1rem;
+         border: 1px solid #fefefe;
+         outline: none;
+         border-radius: 5px;
+         background-color: #cccccc3f;
+         color: #fefefe;
+
+         &::placeholder {
+            color: #ccc;
+         }
+
+         &:focus {
+            background-color: rgba(255, 20, 145, 0.274);
+            border-color: darkred;
+         }
+      }
+
+      & button {
+         margin-top: 1rem;
+         padding: 1rem;
+         font-size: 1.1rem;
+         border-radius: 5px;
+         outline: none;
+         border: none;
+         cursor: pointer;
+         background-color: rgb(31, 30, 30);
+         color: #fefefe;
+         font-weight: bold;
+         letter-spacing: 2px;
+         text-transform: uppercase;
+
+         &:active {
+            background-color: deeppink;
+         }
+      }
+   }
+
+   & .submited {
+      font-size: 1.5rem;
+      max-width: 350px;
+      margin-top: 2rem;
+   }
+
+   & .footer {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      left: 0px;
+      text-align: center;
+      color: #fefefece;
+
+      & h2 {
+         margin: 0;
+      }
+   }
+}
